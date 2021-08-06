@@ -205,19 +205,19 @@ section1:addButton("Start Auto Farming (One time Click)", function()
         local myPos = Character.HumanoidRootPart.Position
         local Objects = {}
         for i,v in pairs(workspace:GetChildren()) do
-            if v:FindFirstChild("Pickup") ~= nil and v.ClassName == "Part" and v.Name == "Essence" or v.Name == "Gold Bar" or v.Name == "Raw Gold" or v.Name == "Crystal Chunk" then
+            if v:FindFirstChild("Pickup") ~= nil and v.ClassName == "Part" and v.Name == "Essence" then
                 local Pos = v.Position
                 local Distance = (myPos - Pos).magnitude
                 if Distance < 40 then
                     table.insert(Objects, v)
                 end
-            elseif v:FindFirstChild("Pickup") ~= nil and v:FindFirstChild("Part") ~= nil and v.Part.ClassName == "Part" and v.Name == "Essence" or v.Name == "Gold Bar" or v.Name == "Raw Gold" or v.Name == "Crystal Chunk" then
+            elseif v:FindFirstChild("Pickup") ~= nil and v:FindFirstChild("Part") ~= nil and v.Part.ClassName == "Part" and v.Name == "Essence" then
                 local Pos = v.Part.Position
                 local Distance = (myPos - Pos).magnitude
                 if Distance < 40 then
                     table.insert(Objects, v)
                 end
-            elseif v:FindFirstChild("Pickup") ~= nil and v.ClassName == "UnionOperation" and v.Name == "Essence" or v.Name == "Gold Bar" or v.Name == "Raw Gold" or v.Name == "Crystal Chunk" then
+            elseif v:FindFirstChild("Pickup") ~= nil and v.ClassName == "UnionOperation" and v.Name == "Essence" then
                 local Pos = v.Position
                 local Distance = (myPos - Pos).magnitude
                 if Distance < 40 then
